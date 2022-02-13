@@ -1,0 +1,39 @@
+body {
+  background-color: snow;
+}
+h1 {
+  color: #000;
+}
+p {
+  color: red;
+}
+
+#s1 {
+  display: inline;
+}
+
+#s2 {
+  display: inline;
+}
+
+#s3 {
+  display: inline;
+}
+
+#inp1 {
+    background-color: #cdda07;
+    border-color: #000;
+}
+#inp2 {
+    background-color: #cdda07;
+    border-color: #000;
+}
+#inp3 {
+    background-color: #cdda07;
+    border-color: #000;
+}
+
+#resultBox {
+    background-color: #cdda07;
+    border-color: #000;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Triangle</title>
+
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- your content here... -->
+    <div id="header">
+        <h1>Enter the length of sides</h1>
+    </div>
+    <div id="body">
+        <h2 id="s1">side 1 </h2><input id="inp1" type="text" /> </br>
+        <h2 id="s2">side 2 </h2><input id="inp2" type="text" /> </br>
+        <h2 id="s3">side 3 </h2><input id="inp3" type="text" /> </br>
+    </div>
+
+    <p id="showinput"></p>
+
+    <div id="calculate">
+        <input type="button" id="bt-enter" onclick="Verification()" value="Enter"></button>
+        <h1 id="result">Result</h1>
+        <input type="text" id="resultBox"> 
+    </div>
+    
+    <script src="Verification.js"></script>
+    <script src="Calculation.js"></script>
+  </body>
+</html>
