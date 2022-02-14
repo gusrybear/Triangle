@@ -14,15 +14,15 @@ var side1;
 var side2;
 var side3;
 var isValid = false;
-var invalidFieldID;
+var invalidFieldID = [];
 
 function isNumber(n) {
-  return typeof n == "number" && !isNaN(n) && isFinite(n) && n>0;
+  return typeof n == "number" && !isNaN(n) && isFinite(n) && n > 0;
 }
 
 function invalidInput() {
   let invalidInput = false;
-   
+
   //change from string to float
   side1 = parseFloat(side1);
   side2 = parseFloat(side2);
@@ -30,22 +30,27 @@ function invalidInput() {
 
   //check number > 0 and is real number
   if (isNumber(side1)) {
-    console.log("1 is number");
-    console.log(side1);
-  }else{
-      console.log("1 isn't number");
-      console.log(side1);
+    invalidInput = false;
+  } else {
+    //push index in invalid array
+    invalidFieldID.push("0");
+    invalidInput = true;
   }
   if (isNumber(side2)) {
-    console.log("2 is number");
-    console.log(side2);
+    invalidInput = false;
+  } else {
+    invalidFieldID.push("1");
+    invalidInput = true;
   }
-  if (isNumber(side2)) {
-    console.log("3 is number");
-    console.log(side3);
+  if (isNumber(side3)) {
+    invalidInput = false;
+  } else {
+    invalidFieldID.push("2");
+    invalidInput = true;
   }
 
-  console.log(result);
+  console.log(invalidFieldID);
+  console.log(invalidInput);
 }
 
 function isTriangle() {
@@ -94,9 +99,11 @@ function missingInputField() {
 }
 
 function Verification() {
+  //reset all input and clear invalidFieldID
   side1 = document.getElementById("inp1").value;
   side2 = document.getElementById("inp2").value;
   side3 = document.getElementById("inp3").value;
+  invalidFieldID = [];
 
   if (missingInputField()) {
     console.log("not full info");
