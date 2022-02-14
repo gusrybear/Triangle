@@ -23,10 +23,12 @@ function isNumber(n) {
 function invalidInput() {
   let invalidInput = false;
    
+  //change from string to float
   side1 = parseFloat(side1);
   side2 = parseFloat(side2);
   side3 = parseFloat(side3);
 
+  //check number > 0 and is real number
   if (isNumber(side1)) {
     console.log("1 is number");
     console.log(side1);
