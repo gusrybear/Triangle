@@ -2,7 +2,7 @@ var result = '';
 
 function Calculation() {
     let type = [];
-
+    // console.log()
     // console.log(side1,' ',side2,' ',side3)
     if (isEquilateral() != ' ') type.push(isEquilateral());
     if (isScalene() != ' ') type.push(isScalene());

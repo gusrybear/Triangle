@@ -100,11 +100,33 @@ function invalidInput() {
     missingInputField = false;
   }
 
-  side1 = parseFloat(side1);
-  side2 = parseFloat(side2);
-  side3 = parseFloat(side3);
+  //check if sqrt include and parse to float
+  if (side1.includes("sqrt")) {
+    side1 = side1.split(/([0-9]+)/);
+    side1 = side1[1];
+    side1 = parseFloat(side1);
+    side1 = Math.sqrt(side1);
+  } else {
+    side1 = parseFloat(side1);
+  }
+  if (side2.includes("sqrt")) {
+    side2 = side2.split(/([0-9]+)/);
+    side2 = side2[1];
+    side2 = parseFloat(side2);
+    side2 = Math.sqrt(side2);
+  } else {
+    side2 = parseFloat(side2);
+  }
+  if (side3.includes("sqrt")) {
+    side3 = side3.split(/([0-9]+)/);
+    side3 = side3[1];
+    side3 = parseFloat(side3);
+    side3 = Math.sqrt(side3);
+  } else {
+    side3 = parseFloat(side3);
+  }
 
-  console.log(side1, side2, side3);
+
   //check number > 0 and is real number
   if (isNumber(side1)) {
   } else {
@@ -124,7 +146,6 @@ function invalidInput() {
   }
   //check invalid index
   if (invalidFieldID.length === 0) {
-    console.log("is valid");
   } else {
     invalidFieldID.forEach(setColorBorder);
     console.log("Not valid");
@@ -134,16 +155,16 @@ function invalidInput() {
     }, 10);
   }
 
-  console.log("Not right input index", invalidFieldID);
-
   return invalidInput;
 }
-1,2,3
+
 function isTriangle() {
   let isTriangle = false;
   if (
-    !invalidInput() &&    
-    (side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1)
+    !invalidInput() &&
+    side1 + side2 > side3 &&
+    side1 + side3 > side2 &&
+    side2 + side3 > side1
   ) {
     isTriangle = true;
   }
@@ -254,8 +275,8 @@ function Verification() {
     }
   }
 
-  console.log("is this triangle", isValid);
   if (isValid) {
+    console.log(side1,' ',side2,' ',side3)
     Calculation();
   }
 }
