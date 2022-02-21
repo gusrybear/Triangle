@@ -20,15 +20,15 @@ p {
   display: inline;
 }
 
+#inp0 {
+    background-color: #cdda07;
+    border-color: #000;
+}
 #inp1 {
     background-color: #cdda07;
     border-color: #000;
 }
 #inp2 {
-    background-color: #cdda07;
-    border-color: #000;
-}
-#inp3 {
     background-color: #cdda07;
     border-color: #000;
 }

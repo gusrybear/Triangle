@@ -1,8 +1,9 @@
 var result = '';
 
-function Calcutaltion() {
+function Calculation() {
     let type = [];
 
+    // console.log(side1,' ',side2,' ',side3)
     if (isEquilateral() != ' ') type.push(isEquilateral());
     if (isScalene() != ' ') type.push(isScalene());
     if (isIsosceles() != ' ') type.push(isIsosceles());
@@ -39,6 +40,9 @@ function isIsosceles() {
 
 function isRightTriangle() {
     if (side1 * side1 == side2 * side2 + side3 * side3 || side2 * side2 == side1 * side1 + side3 * side3 || side3 * side3 == side1 * side1 + side2 * side2)
+    {
+        
         return 'Right Triangle';
+    }
     else return ' ';
 }
